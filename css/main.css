@@ -36,7 +36,6 @@ label{
   font-size: 17px;
 }
 .topnav a.active {
-  background-color: #04AA6D;
   color: white;
 }
 .card-img, .card-img-top {
@@ -50,7 +49,7 @@ label{
 }
 .text{
   width: 50%;
-  height: 150px;
+  height: 190px;
 }
 .mainP{
   width: 100%;
@@ -75,4 +74,5 @@ label{
 .btn-group, .btn-group-vertical {
   position: relative;
   display: ruby block;
+  align-items: center;
 }
