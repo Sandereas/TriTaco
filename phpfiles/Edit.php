@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
     <title>Restaurant</title>
 
@@ -37,13 +37,13 @@
 
 var_dump($_GET);
 
-include "phpfiles/connection.php";
+include "connection.php";
 $data = $conn->query("SELECT * FROM album WHERE ID=".$_GET['p'])->fetch();
 var_dump($data['ID']);
 //foreach ($data as $row) {
   //echo $row ['titel']. " " .$row['artiest']. "<br >/\n";
 //}
-include "phpfiles/header.php";
+include "header.php";
 
 ?>
 
@@ -71,7 +71,7 @@ include "phpfiles/header.php";
 </main>
 
 <?php
-include "phpfiles/footer.php"
+include "footer.php"
 ?>
 
 </body>
