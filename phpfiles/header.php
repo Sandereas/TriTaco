@@ -32,7 +32,7 @@
           </a>
         
             <div class="topnav">
-              <a href="#LogIn"><?php include "phpfiles/FormFiles/Form.php" ?></a>
+              <a href="#LogIn"><?php include "FormFiles/Form.php" ?></a>
               <a class="active" href="#Gerechten">Gerechten</a>
               <a href="#Wiki">Wiki</a>
               <a href="#contact">Contact</a>
