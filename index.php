@@ -61,7 +61,7 @@ include "phpfiles/connection.php";
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="product.php?p=<?php echo $row ['ID'];?>" class="btn btn-sm btn-outline-secondary">View</a>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button  href="phpfiles/Edit.php?p=<?php echo $row ['ID'];?>" type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
                   </div>
                 </div>
