@@ -1,5 +1,5 @@
 
-<link href="FormFiles/cssform.css" rel="stylesheet">
+<link href="cssform.css" rel="stylesheet">
 
   
 
@@ -33,7 +33,7 @@
   </form>
 </div>
 
-<script src="FormFiles/JavaForm.js">
+<script src="JavaForm.js">
 
 </script>
 
