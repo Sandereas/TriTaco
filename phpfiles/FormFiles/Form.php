@@ -1,7 +1,4 @@
 
-<link href="cssform.css" rel="stylesheetForm">
-
-  
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
@@ -32,8 +29,6 @@
     </div>
   </form>
 </div>
-
-<script src="JavaForm.js">
 
 </script>
 
