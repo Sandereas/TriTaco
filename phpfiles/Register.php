@@ -4,8 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+
 }
 
 * {
@@ -68,12 +67,19 @@ a {
 </style>
 </head>
 <body>
-
+<?php
+include ("connection.php");
+$data = $conn->query("INSERT INTO users (UserID, UserName, E-mail ) VALUES (?, ?, ?)")->fetch();
+$pdo->prepare($sql)->execute($data);
+?>
 <form action="/action_page.php">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
+
+    <label for="email"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="Username" id="Username" required>
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
