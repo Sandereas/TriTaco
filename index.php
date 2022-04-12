@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/main.css"> 
 
     <title>Restaurant</title>
-    <link href="phpfiles/FormFiles/cssform.css" rel="stylesheetForm">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
   </head>
