@@ -11,14 +11,15 @@ label{
     font-size: medium;
     color: white;
 }
+.Registerbutton{
+  color: Black;
+}
 .bigger{
     font-size: 25px;
 }
-
 .card-img-top{
     background-image: url(../img/Zrzut\ ekranu\ \(44\).png);
 }
-
 .topnav {
   overflow: hidden;
   background-color: #333;
