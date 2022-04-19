@@ -1,5 +1,5 @@
 <?php 
-
+ob_start();
 include "connection.php";
 
 $sql = "SELECT * FROM users WHERE UserName = :UserName AND UserPassword =:UserPassword";
@@ -12,8 +12,21 @@ $result = $stmt->fetchAll();
 $username = $_POST['UserName'];
 
 if(count($result) > 0){
+    
+session_start();
     $_SESSION["UserName"] = $username;
-    header('Location: admin1.php');
+    
+    if(isset($_SESSION["UserName"])){
+        
+        echo  $_SESSION["UserName"];
+
+        header('Location: ../index.php');
+        ob_get_contents();
+        exit();        
+        
+
+    }
+    
 } else{
     echo "username niet gevonden";
 }
