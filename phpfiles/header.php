@@ -21,7 +21,7 @@
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           
-          <form action="/action_page.php">
+          <form action="loginUser.php">
             <label for="fname">Search:</label>
             <input type="text" id="fname" name="fname"><br><br>
           </form>
@@ -31,9 +31,8 @@
           </a>
         
             <div class="topnav">
-              <a href="#LogIn"><?php include "FormFiles/Form.php" ?></a>
+              <a href="#LogIn"><?php include "Form.php" ?></a>
               <a class="active" href="#Gerechten">Gerechten</a>
-              <a href="#Wiki">Wiki</a>
               <a href="#contact">Contact</a>
               <a href="#about">About</a>
               <a href="Users.php">Users</a>
