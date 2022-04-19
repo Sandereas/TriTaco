@@ -70,11 +70,11 @@ a {
 <?php
 include ("connection.php");
 $sth = $conn->prepare("INSERT INTO users (UserID, UserName, E-mail, Password ) 
-                        VALUES (:Username, :email, psw, psw-repeat)");
+                        VALUES (:Username, :email, UserPassword, psw-repeat)");
 
 $sth->bindParam('Username', $_POST['Username']);
 $sth->bindParam('email', $_POST['email']);
-$sth->bindParam('psw', $_POST['psw']);
+$sth->bindParam('UserPassword', $_POST['UserPassword']);
 $sth->bindParam('psw-repeat', $_POST['psw-repeat']);
 $sth->execute();
 $result = $stmt->fethAll();
