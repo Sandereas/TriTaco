@@ -199,3 +199,15 @@ span.psw {
 #RM1{
   color: #000;
 }
+.imgholder{
+  width: 20%;
+  height: 100px;
+}
+.FirstTextHolder{
+  width: 50%;
+  height: 100px;
+}
+.SecondTextHolder{
+width: 50%;
+height: 100px;
+}
