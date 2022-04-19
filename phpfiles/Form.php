@@ -35,7 +35,7 @@ $_SESSION[''] = false;
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
 
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="UserPassword">Forgot <a href="#">password?</a></span>
     </div>
     <p>  <a class="Registerbutton" href="phpfiles/Register.php">No account? Here you can make one.</a>  </p>
   </form>
