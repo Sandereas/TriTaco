@@ -1,14 +1,4 @@
 
-
-<?php 
-
-unset($_SESSION['UserName']);
-unset($_SESSION['UserPassword']);
-$_SESSION[''] = false;
-
-
-?>
-
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
