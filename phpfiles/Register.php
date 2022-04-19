@@ -69,10 +69,17 @@ a {
 <body>
 <?php
 include ("connection.php");
-$data = $conn->query("INSERT INTO users (UserID, UserName, E-mail ) VALUES (?, ?, ?)")->fetch();
-$pdo->prepare($sql)->execute($data);
+$sth = $conn->prepare("INSERT INTO users (UserID, UserName, E-mail, Password ) 
+                        VALUES (:Username, :email, psw, psw-repeat)");
+
+$sth->bindParam('Username', $_POST['Username']);
+$sth->bindParam('email', $_POST['email']);
+$sth->bindParam('psw', $_POST['psw']);
+$sth->bindParam('psw-repeat', $_POST['psw-repeat']);
+$sth->execute();
+$result = $stmt->fethAll();
 ?>
-<form action="/action_page.php">
+<form action="Users.php" method="post">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
