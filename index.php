@@ -55,6 +55,7 @@ include "phpfiles/connection.php";
                 <img class="card-img-top" src="img/<?php echo $row ['photo'];?>" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text"><?php echo $row ['titel'];?></p>
+                  <p class="card-text">€<?php echo $row ['prijs'];?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="product.php?p=<?php echo $row ['ID'];?>" class="btn btn-sm btn-outline-secondary">View</a>
