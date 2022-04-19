@@ -20,8 +20,8 @@
   <body>
 
   <?php 
+  var_dump($_SESSION["UserName"]);
 include "phpfiles/connection.php";
-
 ?>
 
 <?php
