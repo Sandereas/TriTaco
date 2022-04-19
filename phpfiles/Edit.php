@@ -37,12 +37,6 @@ include "admin1.php"
   <p>  <?php echo $data['Ingredienten'] ?>  <p> 
 </div>
 <div>
-
 </div>
-
-
-
-
-
 </body>
 </html>
