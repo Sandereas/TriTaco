@@ -13,7 +13,7 @@ $username = $_POST['UserName'];
 
 if(count($result) > 0){
     $_SESSION["UserName"] = $username;
-    header('index.php');
+    header('Location: admin1.php');
 } else{
     echo "username niet gevonden";
 }
