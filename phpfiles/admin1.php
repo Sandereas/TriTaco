@@ -1,15 +1,17 @@
 
 <?php
 include ('connection.php');
-if(isset($_SESSION['loggedin'])) {
-    echo "Welcome" . $_SESSION['UserName'];
-} else {
-    header("Location: LoginUser.php");
-}
+
+//if(isset($_SESSION['loggedin'])) {
+    //echo "Welcome" . $_SESSION['UserName'];
+//} else {
+    //echo 'fout';
+    //header("Location: LoginUser.php");
+//}
 $sql = "SELECT * FROM album";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
-$result = $stmt->fethAll();
+$result = $stmt->fetchAll();
 
 ?>
 
