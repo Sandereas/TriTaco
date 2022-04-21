@@ -20,7 +20,6 @@
   <body>
 
   <?php 
-  var_dump($_SESSION["UserName"]);
 include "phpfiles/connection.php";
 ?>
 
@@ -59,7 +58,7 @@ include "phpfiles/connection.php";
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="product.php?p=<?php echo $row ['ID'];?>" class="btn btn-sm btn-outline-secondary">View</a>
-                      <a href="phpfiles/Edit.php?p=<?php echo $row ['ID'];?>" type="button" class="btn btn-sm btn-outline-secondary" >Edit</a>
+                      <a href="phpfiles/admin1.php?p=<?php echo $row ['ID'];?>" type="button" class="btn btn-sm btn-outline-secondary" >Edit</a>
                     </div>
                   </div>
                 </div>
