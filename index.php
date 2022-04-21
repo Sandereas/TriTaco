@@ -73,4 +73,3 @@ include "phpfiles/connection.php";
 <?php
   include "phpfiles/footer.php";
 ?>
-    
