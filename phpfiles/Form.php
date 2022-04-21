@@ -30,7 +30,4 @@
     <p>  <a class="Registerbutton" href="phpfiles/Register.php">No account? Here you can make one.</a>  </p>
   </form>
 </div>
-<script >
-
-</script>
 
