@@ -3,7 +3,7 @@
 
 <div id="LoginForm" class="modal">
   
-  <form class="modal-content animate" action="phpfiles/loginUser.php" method="post" name="LogInForm">
+  <form class="modal-content animate" action="phpfiles/loginUser.php" method="post" name="LogInForm" id="LogInForm">
     <div class="imgcontainer">
       <span onclick="document.getElementById('LoginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img/avatar.jpg" alt="Avatar" class="avatar">
@@ -11,10 +11,10 @@
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="UserName" required>
+      <input type="text" placeholder="Enter Username" name="UserName" id="UserName" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="UserPassword" required>
+      <input type="password" placeholder="Enter Password" name="UserPassword" id="UserPassword" required>
         
       <button type="submit">Login</button>
       <label id="RM1">
