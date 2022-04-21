@@ -3,7 +3,7 @@
 
 <div id="LoginForm" class="modal">
   
-  <form class="modal-content animate" action="phpfiles/loginUser.php" method="post">
+  <form class="modal-content animate" action="phpfiles/loginUser.php" method="post" name="LogInForm">
     <div class="imgcontainer">
       <span onclick="document.getElementById('LoginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img/avatar.jpg" alt="Avatar" class="avatar">
