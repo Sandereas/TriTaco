@@ -1,11 +1,11 @@
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button class="buttonForm" onclick="document.getElementById('LoginForm').style.display='block'" style="width:auto;">Login</button>
 
-<div id="id01" class="modal">
+<div id="LoginForm" class="modal">
   
   <form class="modal-content animate" action="phpfiles/loginUser.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('LoginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img/avatar.jpg" alt="Avatar" class="avatar">
     </div>
 
@@ -27,7 +27,7 @@
 
       <span class="UserPassword">Forgot <a href="#">password?</a></span>
     </div>
-    <p>  <a class="Registerbutton" href="phpfiles/Register.php">No account? Here you can make one.</a>  </p>
+    <p>  <a class="Registerbutton" href="phpfiles/Register.php" style="color:black;">No account? Here you can make one.</a>  </p>
   </form>
 </div>
 
