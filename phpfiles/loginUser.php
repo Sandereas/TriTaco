@@ -17,7 +17,6 @@ if(count($result) > 0){
     if(isset($_SESSION["UserName"])){
         
         echo  $_SESSION["UserName"];
-
         header('Location: ../index.php');
         exit();        
         
