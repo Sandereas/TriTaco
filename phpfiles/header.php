@@ -34,9 +34,10 @@
               <a href="#LogIn"><?php include "Form.php" ?></a>
               <a class="active" href="#Gerechten">Gerechten</a>
               <a href="#contact">Contact</a>
-              <a href="#about">About</a>
               <a href="Users.php">Users</a>
+              <a href="phpfiles/Logout.php">Logout</a>
             </div>
+          
         </div>
       </div>
     </header>
