@@ -1,5 +1,4 @@
 <?php 
-ob_start();
 include "connection.php";
 
 $sql = "SELECT * FROM users WHERE UserName = :UserName AND UserPassword =:UserPassword";
@@ -13,7 +12,6 @@ $username = $_POST['UserName'];
 
 if(count($result) > 0){
     
-session_start();
     $_SESSION["UserName"] = $username;
     
     if(isset($_SESSION["UserName"])){
@@ -21,10 +19,8 @@ session_start();
         echo  $_SESSION["UserName"];
 
         header('Location: ../index.php');
-        ob_get_contents();
         exit();        
         
-
     }
     
 } else{
