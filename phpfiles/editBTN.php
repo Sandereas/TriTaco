@@ -27,10 +27,9 @@ if(isset($_POST["submit"])){
 ?>
 
 <form action="" method="post">
-        titel<input type="hidden" name="ID" id="" value="<?php echo $result["ID"] ?>"><br />
-        Text_Details<input type="text" name="titel" id="" value="<?php echo $result["titel"] ?>"><br />
-        Ingredienten<input type="text" name="Text_Details" id="" value="<?php echo $result["Text_Details"] ?>"><br />
-        prijs<input type="text" name="Ingredienten" id="" value="<?php echo $result["Ingredienten"] ?>"><br />
+        titel<input type="text" name="titel" id="" value="<?php echo $result["titel"] ?>"><br />
+        Text_Details<input type="text" name="Text_Details" id="" value="<?php echo $result["Text_Details"] ?>"><br />
+        Ingredienten<input type="text" name="Ingredienten" id="" value="<?php echo $result["Ingredienten"] ?>"><br />
         prijs<input type="text" name="prijs" id="" value="<?php echo $result["prijs"] ?>"><br />
         <input type="submit" name="submit" value="toevoegen">
 </form>
