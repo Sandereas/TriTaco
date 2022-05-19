@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    height: 100vw;
+    width: 100%;
+    background-color: #FBF8EE;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
+header{
+    height: 94px;
+    width: 80%;
+    background-color: #FBF8EE;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo {
+    height: 94px;
+    width: 10%;
+    background-image: url(../img/TriTacoLogo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav {
+    height: 94px;
+    width: 60%;
+    background-color: #FBF8EE;
+    display: flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+button {
+    position: relative;
+    background-color: #FBF8EE;
+    border: none;
+    font-size: 14px;
+    color: #2d819d;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px 4px 0px 0px;
+}
+button:hover {
+    background-color: #d54753;
+}
+.search{
+    height: 94px;
+    width: 30%;  
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#sumbit{
+    position: relative;
+    background-color: #FBF8EE;
+    border: none;
+    font-size: 14px;
+    color: #2d819d;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+main{
+    height: 900px;
+    width: 100%;
+    display: flex;
+}
+.break{
+    height: 5px;
+    width: 100%;
+    background-color: #d54753;
+}
