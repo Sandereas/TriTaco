@@ -13,3 +13,7 @@ if($_SESSION['loggedin'] == true && ($_Session['Admincheck'] == true)){
 
 ?>
 <?php include('../config/footer.php'); ?>    
+
+
+
+hallo test
