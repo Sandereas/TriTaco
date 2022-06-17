@@ -63,7 +63,7 @@ $updatedest = [
     'description' => $description,
     'reismogelijkheidID' => $_GET['reismogelijkheidID'],
 ];
-$sql = "UPDATE reismogelijkheden SET name=:name, image=:image, price=:price, description=WHERE userid=:userid";
+$sql = "UPDATE reismogelijkheden SET name=:name, image=:image, price=:price, description=WHERE reismogelijkheidID=:reismogelijkheidID";
 $stmt= $pdo->prepare($sql);
 $stmt->execute($updatedest);
 
@@ -71,7 +71,7 @@ $stmt->execute($updatedest);
     $results_login = $stmt->fetch(PDO::FETCH_ASSOC);
 
     //echo "data inserted";
-    $_SESSION['add'] = "Admin Changed Succesfull";
+    $_SESSION['add'] = "reismogelijkheid Changed Succesfull";
     header('Location:home.php');
     }
     else {
