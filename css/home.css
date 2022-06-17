@@ -142,8 +142,9 @@ td {
 .buttonhome {
     padding: 1%;
     text-decoration: none;
-    color: black;
+    color: red;
     font-weight: bold;
+
     
 }
 .buttonhome:hover {
