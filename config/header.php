@@ -27,7 +27,7 @@
                 <li> <a href= "../php/destinations.php"> Destinations </a> </li>
                 <li> <a href= "../php/order.php"> Order </a> </li>
                 <li> <a href= "../php/contact.php"> Contact </a> </li>
-                <li> <a href="../login/logout.php"> Logout </a> </li>
+                <li> <a href="../php/logout.php"> Logout </a> </li>
             <ul>
         </div> 
     </header>

@@ -1,13 +1,11 @@
 <?php include('../config/header.php'); ?>
-<?php include('../config/userdata.php'); ?>
 
 
-<?php if($_SESSION['loggedin'] == true){
-     echo $_SESSION['username'];
- }
- else {
+<?php if($_SESSION['loggedin'] == false){
+ 
          header("Location: login.php");
- } ?>
+}
+ ?>
 
 
 <?php include('../config/footer.php'); ?>
