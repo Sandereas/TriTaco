@@ -17,7 +17,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
             $_SESSION['username'] = $datageb['username'];
             $_SESSION['userid'] = $datageb['userid'];
             $_SESSION['loggedin'] = true;
-            header("Location: ../home.php");
+            header("Location: ../site/home.php");
 
 
         }

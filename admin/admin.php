@@ -7,11 +7,11 @@ if($_SESSION['loggedin'] == true)  //&& ($_Session['Admincheck'] == true)){
     echo "GG ". $_SESSION['username'];
 }
     else if($_SESSION['loggedin']){
-     header("Location: ../home.php");
+     header("Location: ../site/home.php");
      exit
     }
     else    {
-    header("Location: login.php");
+    header("Location: ../php/login.php");
     exit
     }
 
