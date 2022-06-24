@@ -1,5 +1,5 @@
 <?php 
-if($_SESSION['loggedin'] == true && ($_Session['Admincheck'] == true)){
+if($_SESSION['loggedin'] == true) {
     echo "GG ". $_SESSION['username'];
 }
     else if($_SESSION['loggedin']){

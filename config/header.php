@@ -1,4 +1,5 @@
 <?php include('connection.php'); ?>
+<?php include('userdata.php') ?>
 
 
 
@@ -18,10 +19,8 @@
 <body>
     <header>
         <div class="box">
-            
+
             <ul>
-                <li> <?php if($_SESSION['loggedin'] == true){
-                echo $_SESSION['username']; } ?> </li>
                 <br> <br>
                 <li> <a href= "../site/home.php"> Home </a> </li>
                 <li> <a href= "../php/destinations.php"> Destinations </a> </li>

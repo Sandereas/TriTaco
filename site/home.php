@@ -33,6 +33,6 @@
         <img src="../assets/images/GG.png" alt="GG Logo">
         </div>
     </main>
-    <?php include('config/footer.php'); ?>
+    <?php include('../config/footer.php'); ?>
 
  
