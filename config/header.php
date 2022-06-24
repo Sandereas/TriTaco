@@ -27,6 +27,7 @@
                 <li> <a href= "../php/order.php"> Order </a> </li>
                 <li> <a href= "../php/contact.php"> Contact </a> </li>
                 <li> <a href="../php/logout.php"> Logout </a> </li>
+                <li> <a href="../admin/admin.php"> Admin </a> </li>
             <ul>
         </div> 
     </header>

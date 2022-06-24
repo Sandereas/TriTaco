@@ -1,21 +1,7 @@
 <?php include('../config/header.php'); ?>
 <?php include('../config/userdata.php'); ?>
 
-<?php
-if($_SESSION['loggedin'] == true)  //&& ($_Session['Admincheck'] == true)){
-    {
-    echo "GG ". $_SESSION['username'];
-}
-    else if($_SESSION['loggedin']){
-     header("Location: ../site/home.php");
-     exit
-    }
-    else    {
-    header("Location: ../php/login.php");
-    exit
-    }
 
-?>
     <main>
         <div class ="box">
             <b> <h1> Editor The Web</h1> </b>
@@ -32,7 +18,10 @@ if($_SESSION['loggedin'] == true)  //&& ($_Session['Admincheck'] == true)){
              ?>
             <br> <br>
 
-            <a href="useradd.php" class="buttonadmin"> Add Admin</a>
+            <a href="../php/register.php" class="buttonadmin"> Add Admin</a>
+            <br>
+            <br>
+            <a href="../admin/destinationsadd.php" class="buttonadmin"> Add Destination</a>
             <br>
             <br>
             
@@ -43,28 +32,28 @@ if($_SESSION['loggedin'] == true)  //&& ($_Session['Admincheck'] == true)){
                         <th>ID</th>
                         <th>Username</th>
                         <th>Email</th>
-                        <th>Naam</th>
-                        <th>Actions</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     
     <?php 
                 foreach ($datageb as $row)  {?>
                     <tr>
                         <td> 
-                            <?php echo $row['id'];?>
+                            <?php echo $row['userID'];?>
                         </td>
                         <td>
-                            <?php echo $row['Username']; ?>
+                            <?php echo $row['username']; ?>
                         </td>
                         <td>
                             <?php echo $row['email']; ?>
                         </td>
                         
                         <td colspan="2">
-                        <a href="userchange.php?id=<?php echo $row['id']; ?>" class="buttonupdate"> Update Admin </a> 
+                        <a href="userchange.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Update Admin </a> 
                         </td>
                         <td colspan="2">
-                        <a href="userdel.php?id=<?php echo $row['id']; ?>" class="buttondelete"> Delete Admin </a> 
+                        <a href="userdel.php?userID=<?php echo $row['userID']; ?>" class="buttondelete"> Delete Admin </a> 
                     </tr>
                     <?php } ?>
                 

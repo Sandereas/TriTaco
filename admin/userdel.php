@@ -2,28 +2,22 @@
 <?php include('../config/userdata.php') ?>
 
 <?php
-if($_SESSION['loggedin'] == true && ($_Session['Admincheck'] == true)){
-  echo "GG ". $_SESSION['username'];
-}
-  else if($_SESSION['loggedin']){
-   header("Location: ../home.php");
-   exit
-  }
-  else    {
-  header("Location: ../php/login.php");
-  exit
-  }
-?>
-
-<?php 
+ if($_SESSION['loggedin'] == true){
+     echo "GG ". $_SESSION['username'];
+ }
+ else {
+         header("Location: login.php");
+         
+     }
 
 
-$deladmin = [
-  'userid' => $_GET['userid'],
+
+$deluser = [
+  'userID' => $_GET['userID'],
 ];
-$sql = "DELETE FROM users WHERE userid = :userid";
+$sql = "DELETE FROM users WHERE userID = :userID";
 $stmt= $pdo->prepare($sql);
-$stmt->execute($deladmin);
+$stmt->execute($deluser);
 
 if ($datageb > 0) {
   $results_login = $stmt->fetch(PDO::FETCH_ASSOC);

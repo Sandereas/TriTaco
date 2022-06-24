@@ -41,7 +41,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     <input type="submit" value="Submit">
 </form>
 
-
+<br>
+<br>
+<br>
 
 <a href="register.php" class="buttonadmin"> Add User</a>
 

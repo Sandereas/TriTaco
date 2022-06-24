@@ -2,19 +2,16 @@
 <?php include('../config/userdata.php') ?>
 
 <?php
-if($_SESSION['loggedin'] == true && ($_Session['Admincheck'] == true)){
-    echo "GG ". $_SESSION['username'];
-}
-    else if($_SESSION['loggedin']){
-     header("Location: ../home.php");
-     exit
-    }
-    else    {
-    header("Location: ../php/login.php");
-    exit
-    }
-    
+ if($_SESSION['loggedin'] == true){
+     echo "GG ". $_SESSION['username'];
+ }
+ else {
+         header("Location: login.php");
+         
+     }
+     
 ?>
+
 
 <form action="" method="POST"> 
             
