@@ -7,7 +7,6 @@ if($_SESSION['loggedin']  == true) {
 }
     else    {
     }
-    exit
 
 
 ?>
@@ -90,12 +89,12 @@ $users = $stmt->fetch();
   
         //echo "data inserted";
         $_SESSION['add'] = "User Added Succesfull";
-        header('Location:../home.php');
+        header('Location:login.php');
         }
     else {
         //echo "error";
         $_SESSION['add'] = "Failed to add User";
-        header('Location:login.php');
+        header('Location:register.php');
     }
 }
     ?>
