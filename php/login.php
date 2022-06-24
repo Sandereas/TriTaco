@@ -42,4 +42,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 </form>
 
 
+
+<a href="register.php" class="buttonadmin"> Add User</a>
+
+
+
 <?php include('../config/footer.php'); ?>

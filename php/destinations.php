@@ -27,7 +27,7 @@
         ?>
         <br> <br>
 
-        <a href="../admin/destinationsadd.php" class="buttonadmin"> Add Food</a>
+        <a href="../admin/destinationsadd.php" class="buttonadmin"> Add Destination</a>
     <br>
     <br>
     <table class ="tabledest">

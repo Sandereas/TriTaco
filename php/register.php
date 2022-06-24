@@ -2,14 +2,10 @@
 <?php include('../config/userdata.php') ?>
 
 <?php 
-if($_SESSION['loggedin']  == true && ($_Session['loggedin'] == true)){
-    echo "GG ". $_SESSION['username'];
+if($_SESSION['loggedin']  == true) {
+    header("Location: ../site/home.php");
 }
-    else if($_SESSION['loggedin']) {
-     header("Location: ../site/home.php");
-    }
     else    {
-    header("Location: ../php/login.php");
     }
     exit
 
