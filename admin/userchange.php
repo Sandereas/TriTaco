@@ -18,16 +18,24 @@
             <table class ="tableaddadmin">
 
                 <tr>
-                    <td>username</td>
-                    <td><input type="text" name="username" placeholder="Typ hier uw gebruikersnaam" ></td> <br>
+                    <td>Username</td>
+                    <td><input type="text" name="username" placeholder="Typ here your username" ></td> <br>
                 </tr>
                 <tr>
-                    <td>password</td>
-                    <td><input type="password" name="password" placeholder="Typ hier uw wachtwoord" ></td> 
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Typ here your password" ></td> 
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Typ here your email" ></td> 
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td><input type="text" name="admin" placeholder="admin (yes/no)" ></td> 
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" name="submit" value="Update Admin" class="buttonupdate">
+                        <input type="submit" name="submit" value="Update User" class="buttonupdate">
                     </td>
                 </tr>
             </table>
@@ -42,18 +50,21 @@
 
 if(isset($_POST['submit']))
 {
-    $gebruikersnaam = $_POST ['username'];
+    $username = $_POST ['username'];
     $password = ($_POST ['password']);
+    $email = ($_POST ['email']);
+    $admin = ($_POST ['admin']);
 
 
 
 $updateadmin = [
     'username' => $username,
     'password' => $password,
-
-    'userid' => $_GET['userid'],
+    'email' => $email,
+    'admin' => $admin,
+    'userID' => $_GET['userID'],
 ];
-$sql = "UPDATE users SET username=:username, password=:password, WHERE userid=:userid";
+$sql = "UPDATE users SET username=:username, password=:password, email=:email, admin=:admin WHERE userID=:userID";
 $stmt= $pdo->prepare($sql);
 $stmt->execute($updateadmin);
 
@@ -71,5 +82,9 @@ $stmt->execute($updateadmin);
     }
 }
 ?> 
-
-  <?php  include('../config/footer') ?>
+<footer>
+       Reisbureau GG - Product created by Sander en Keyan
+    </footer>
+    <script src="../js/login.js"></script>
+</body>
+</html>

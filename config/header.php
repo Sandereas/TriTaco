@@ -18,7 +18,7 @@
 </head>
 <body>
     <header>
-        <div class="box">
+        <div class="box2">
 
             <ul>
                 <br> <br>

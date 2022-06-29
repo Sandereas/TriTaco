@@ -35,7 +35,7 @@
                 </tr>
                 <tr> 
                     <td>Admin</td>
-                    <td><input type="text" name="admin" placeholder="Typ hier uw email" ></td> <br>
+                    <td><input type="text" name="admin" placeholder="admin (yes/no)" ></td> 
                 <tr>
                     <td colspan="2">
                         <input type="submit" name="submit" value="Add Admin" class="buttonsub">

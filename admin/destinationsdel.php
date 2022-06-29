@@ -1,27 +1,30 @@
-<?php 
-if($_SESSION['loggedin'] == true){ //&& ($_Session['Admincheck'] == true)){
-    echo "GG ". $_SESSION['username'];
-}
-    else    {
-    header("Location: ../php/login.php");
-}
+<?php include('../config/header.php');  ?>
+<?php include('../config/reisdata.php'); ?>
 
-$deldest = [
+<?php
+ if($_SESSION['loggedin'] == true){
+     echo $_SESSION['username'];
+ }
+ else {
+         header("Location: ../php/login.php");
+ }
+
+$delreis = [
     'reismogelijkheidID' => $_GET['reismogelijkheidID'],
   ];
   $sql = "DELETE FROM reismogelijkheden WHERE reismogelijkheidID = :reismogelijkheidID";
   $stmt= $pdo->prepare($sql);
-  $stmt->execute($deldest);
+  $stmt->execute($delreis);
   
-  if ($datageb > 0) {
+  if ($datadest > 0) {
     $results_login = $stmt->fetch(PDO::FETCH_ASSOC);
   
-    //echo "data inserted";
-    $_SESSION['add'] = "destination deleted Succesfull";
-    header('Location:admin.php');
+    echo "data inserted";
+    $_SESSION['add'] = "Destination deleted Succesfull";
+    header('Location:../php/destinations.php');
     }
     else {
-    echo "error";
+      echo "error";
     }
   
   ?>

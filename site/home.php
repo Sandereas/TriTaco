@@ -30,7 +30,7 @@
         </div>    
     
         <div class="Image">
-        <img src="../assets/images/GG.png" alt="GG Logo">
+        <img src="../images/GG.png" alt="GG Logo">
         </div>
     </main>
     <?php include('../config/footer.php'); ?>
