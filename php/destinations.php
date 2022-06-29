@@ -15,7 +15,7 @@
 
 <main>
     <div class ="box">
-        <b> <h1> destination list</h1> </b>
+        <b> <h1> Destination list</h1> </b>
         <br>
         <br>
 
@@ -31,12 +31,12 @@
     <br>
     <table class ="tabledest">
     <tr>
-        <th>reismogelijkheidID</th>
-        <th>data</th>
-        <th>naam</th>
-        <th>image</th>
-        <th>price</th>
-        <th>description</th>
+        <th>ReismogelijkheidID</th>
+        <th>Country</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Description</th>
     </tr>
     <?php 
                 foreach ($datadest as $row)  {?>
@@ -45,13 +45,13 @@
                             <?php echo $row['reismogelijkheidID'];?>
                         </td>
                         <td>
-                            <?php echo $row['data']; ?>
+                            <?php echo $row['country']; ?>
                         </td>
                         <td>
-                            <?php echo $row['naam']; ?>
+                            <?php echo $row['name']; ?>
                         </td>
                         <td>
-                        <img class="imgstyle" src="../assets\images/<?php echo $row['image']; ?>">
+                        <img class="imgstyle" src="../images/<?php echo $row['image']; ?>">
                         </td>
                         <td>
                         € <?php echo $row['price']; ?>
@@ -60,10 +60,10 @@
                             <?php echo $row['description']; ?>
                         </td>
                         <td>
-                        <a href="../admin/destinationschange.php?id=<?php echo $row['id']; ?>" class="buttonupdate"> Update Food </a> 
+                        <a href="../admin/destinationschange.php?id=<?php echo $row['reismogelijkheidID']; ?>" class="buttonupdate"> Update Reis </a> 
                         </td>
                         <td colspan="2">
-                        <a href="../admin/destinationsdel.php?id=<?php echo $row['reismogelijkheidID']; ?>" class="buttondelete"> Delete Food </a> 
+                        <a href="../admin/destinationsdel.php?id=<?php echo $row['reismogelijkheidID']; ?>" class="buttondelete"> Delete Reis </a> 
                         </td>
                     </tr>
                     <?php } ?>

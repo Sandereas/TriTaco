@@ -62,12 +62,12 @@ $stmt->execute($updateadmin);
 
     //echo "data inserted";
     $_SESSION['add'] = "Admin Changed Succesfull";
-    header('Location:home.php');
+    header('Location:admin.php');
     }
     else {
     //echo "error";
     $_SESSION['add'] = "Failed to Change Admin";
-    header('Location:home.php');
+    header('Location:userchange.php');
     }
 }
 ?> 

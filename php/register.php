@@ -1,15 +1,6 @@
 <?php include('../config/header.php'); ?>
 <?php include('../config/userdata.php') ?>
 
-<?php 
-if($_SESSION['loggedin']  == true) {
-    header("Location: ../site/home.php");
-}
-    else    {
-    }
-
-
-?>
 
     <div class="mainer">
         <div class="box"> 

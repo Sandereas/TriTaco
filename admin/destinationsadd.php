@@ -1,5 +1,5 @@
 <?php include('../config/header.php'); ?>
-<?php include('../config/userdata.php') ?>
+<?php include('../config/reisdata.php') ?>
 
 <?php 
 if($_SESSION['loggedin']  == true) {
@@ -14,7 +14,7 @@ if($_SESSION['loggedin']  == true) {
 
     <div class="mainer">
         <div class="box"> 
-            <h1> Add Admin</h1>
+            <h1> Add destination</h1>
 
             <br>
 
@@ -32,23 +32,27 @@ if($_SESSION['loggedin']  == true) {
             <table class ="tableadddest">
 
                 <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username" placeholder="Typ hier uw gebruikersnaam" ></td> <br>
+                    <td>Country</td>
+                    <td><input type="text" name="country" placeholder="Typ here the country name" ></td> <br>
                 </tr>
                 <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password" placeholder="Typ hier uw wachtwoord" ></td> 
+                    <td>Name</td>
+                    <td><input type="text" name="name" placeholder="Typ here the destination name" ></td> 
                 </tr>
                 <tr>
-                    <td>Email</td>
-                    <td><input type="email" name="email" placeholder="Typ hier uw email" ></td> <br>
+                    <td>Image</td>
+                    <td><input type="text" name="image" placeholder="Place here the image url" ></td> <br>
                 </tr>
                 <tr> 
-                    <td>Admin</td>
-                    <td><input type="text" name="admin" placeholder="Typ hier uw email" ></td> <br>
-                <tr>
+                    <td>Price</td>
+                    <td><input type="text" name="price" placeholder="Typ here the price" ></td> <br>
+                </tr>
+                <tr> 
+                    <td>Description</td>
+                    <td><input type="text" name="description" placeholder="Typ here the description" ></td> <br>
+                </tr>
                     <td colspan="2">
-                        <input type="submit" name="submit" value="Add Admin" class="buttonsub">
+                        <input type="submit" name="submit" value="Add Destination" class="buttonsub">
                     </td>
                 </tr>
             </table>
@@ -60,24 +64,28 @@ if($_SESSION['loggedin']  == true) {
     //Add Admin
     if(isset($_POST['submit']))
 {
-    $username = $_POST ['username'];
-    $password = ($_POST ['password']);
-    $email = $_POST ['email'];
-    $admin = $_POST ['admin'];
+    $country = $_POST ['country'];
+    $name = ($_POST ['name']);
+    $image = $_POST ['image'];
+    $price = $_POST ['price'];
+    $description = $_POST ['description'];
 
-    $sql = "INSERT INTO users SET
-        username = :username,
-        password =:password,
-        email = :email,
-        admin =:admin
+    $sql = "INSERT INTO reismogelijkheden SET
+        country =:country,
+        name =:name,
+        image =:image,
+        price =:price,
+        description =:description
     ";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-    'username' => $username,
-    'password' => $password,
-    'email' => $email,
-    'admin' => $admin
+    'country' => $country,
+    'name' => $name,
+    'image' => $image,
+    'price' => $price,
+    'description' => $description
+    
 ]); 
 $users = $stmt->fetch();
     
@@ -85,17 +93,17 @@ $users = $stmt->fetch();
 
 
 
-        if ($datageb > 0) {
+        if ($datadest > 0) {
                 $results_login = $stmt->fetch(PDO::FETCH_ASSOC);
   
         //echo "data inserted";
-        $_SESSION['add'] = "User Added Succesfull";
-        header('Location:login.php');
+        $_SESSION['add'] = "Destination Added Succesfull";
+        header('Location:../php/destinations.php');
         }
     else {
         //echo "error";
-        $_SESSION['add'] = "Failed to add User";
-        header('Location:register.php');
+        $_SESSION['add'] = "Failed to add Destination";
+        header('Location:destinationsadd.php');
     }
 }
     ?>

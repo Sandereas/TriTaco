@@ -18,7 +18,7 @@ if($_SESSION['loggedin'] == true && ($_Session['Admincheck'] == true)){
             <table class ="tableaddadmin">
 
                 <tr>
-                    <td>naam</td>
+                    <td>name</td>
                     <td><input type="text" name="name" placeholder="Typ hier uw gebruikersnaam" ></td> <br>
                 </tr>
                 <tr>
@@ -57,13 +57,14 @@ if(isset($_POST['submit']))
 
 
 $updatedest = [
+    'country' => $country,
     'name' => $name,
     'image' => $image,
     'price' => $price,
     'description' => $description,
     'reismogelijkheidID' => $_GET['reismogelijkheidID'],
 ];
-$sql = "UPDATE reismogelijkheden SET name=:name, image=:image, price=:price, description=WHERE reismogelijkheidID=:reismogelijkheidID";
+$sql = "UPDATE reismogelijkheden SET country=:country, name=:name, image=:image, price=:price, description=WHERE reismogelijkheidID=:reismogelijkheidID";
 $stmt= $pdo->prepare($sql);
 $stmt->execute($updatedest);
 
