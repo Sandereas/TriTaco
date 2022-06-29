@@ -61,12 +61,13 @@ main {
 
 .container {
   width: 30%;
-  background-color: darkgoldenrod;
+  background-color: #ebf38b;
   margin: 2%;
   padding: 2%;
   text-align: center;
   display: flex;
   flex-direction: row;
+  box-shadow: 3px 6px 10px 6px rgba(0, 0, 0, 0.58);
 }
 /* Footer */
 footer {
