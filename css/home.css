@@ -9,11 +9,12 @@
 .box {
   padding: 1%;
   width: 80%;
+  background-color: #cbbf7a;
 }
 
 /* Header settings */
 header {
-  background-color: orange;
+  background-color: #cbbf7a;
   text-align: center;
   padding-top: 3px;
   border-bottom: 1px solid black;
@@ -135,6 +136,7 @@ td {
   padding: 1%;
   text-decoration: none;
   color: red;
+  background-color: #ebf38b;
   font-weight: bold;
   border: solid black 2px;
 }
