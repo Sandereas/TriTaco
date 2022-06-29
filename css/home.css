@@ -9,15 +9,31 @@
 .box {
   padding: 1%;
   width: 80%;
+  height: 100%;
+  background-color: #9F956C;
+  border-radius: 3px;
+  box-shadow: 3px 6px 10px 6px rgba(0,0,0,0.58);
+}
+.box2 {
+  padding: 1%;
+  width: 80%;
+  background-color: #584D3D;
+
+}
+
+.box3 {
+  padding: 1%;
+  width: 80%;
+  background-color: #584D3D;
 }
 
 /* Header settings */
-header {
+/* header {
   background-color: orange;
   text-align: center;
   padding-top: 3px;
   border-bottom: 1px solid black;
-}
+} */
 
 header ul {
   list-style-type: none;
@@ -39,19 +55,19 @@ header ul li a:hover {
 
 /* Content Settings */
 main {
-  background-color: grey;
+  background-color: #9F956C;
   color: black;
   display: flex;
   flex-direction: row;
 }
 .mainer {
-  background-color: grey;
+  background-color: #9F956C;
   color: black;
 }
 
 .Image {
   width: 55%;
-  background-color: darkgoldenrod;
+  background-color: #CBBF7A;
   margin: 2%;
   padding: 2%;
   text-align: center;
@@ -60,7 +76,7 @@ main {
 
 .container {
   width: 30%;
-  background-color: darkgoldenrod;
+  background-color: #EBF38B;
   margin: 2%;
   padding: 2%;
   text-align: center;
@@ -69,7 +85,7 @@ main {
 }
 /* Footer */
 footer {
-  background-color: orange;
+  background-color: #584D3D;
   display: flex;
   flex-direction: column;
   border: 2px solid black;
@@ -85,16 +101,19 @@ footer {
   text-align: center;
   border: 2px solid black;
   padding: 1px;
-  background-color: orange;
+  background-color: #CBBF7a;
   color: black;
+  box-shadow: 3px 6px 10px 6px rgba(0,0,0,0.58);
+
 }
 .tableaddadmin {
   width: 30%;
   text-align: center;
   border: 2px solid black;
   padding: 1px;
-  background-color: orange;
+  background-color: #CBBF7A;
   color: black;
+  box-shadow: 3px 6px 10px 6px rgba(0,0,0,0.58);
 }
 .tabledest {
   width: 100%;
@@ -102,15 +121,16 @@ footer {
   text-align: center;
   border: 2px solid black;
   padding: 1px;
-  background-color: orange;
+  background-color: #CBBF7a;
   color: black;
+  box-shadow: 3px 6px 10px 6px rgba(0,0,0,0.58);
 }
 .tableadddest {
   width: 30%;
   text-align: center;
   border: 2px solid black;
   padding: 1px;
-  background-color: orange;
+  background-color: #CBBF7a;
   color: black;
 }
 
@@ -120,13 +140,23 @@ footer {
   text-align: center;
   border: 2px solid black;
   padding: 1px;
-  background-color: orange;
+  background-color: #CBBF7a;
   color: black;
   margin-top: 25px;
+  box-shadow: 3px 6px 10px 6px rgba(0,0,0,0.58);
+}
+
+tr:hover {
+  background-color: beige;
 }
 
 td {
   border: 1px solid black;
+}
+
+th {
+
+
 }
 
 /* Buttons */
@@ -134,19 +164,20 @@ td {
 .buttonhome {
   padding: 1%;
   text-decoration: none;
-  color: red;
+  color: #584D3D;
   font-weight: bold;
-  border: solid black 2px;
+  border-radius: 3px;
 }
 .buttonhome:hover {
   color: white;
 }
 .buttonadmin {
-  background-color: chocolate;
+  background-color: #584D3D;
   padding: 1%;
   text-decoration: none;
   color: black;
   font-weight: bold;
+  border-radius: 3px;
 }
 .buttonadmin:hover {
   color: white;
@@ -154,11 +185,12 @@ td {
 }
 
 .buttonupdate {
-  background-color: yellow;
+  background-color: #EBF38B;
   padding: 1%;
   text-decoration: none;
   color: black;
   font-weight: bold;
+  border-radius: 3px;
 }
 .buttonupdate:hover {
   color: white;
@@ -166,11 +198,12 @@ td {
 }
 
 .buttondelete {
-  background-color: red;
+  background-color: #584D3D;
   padding: 1%;
   text-decoration: none;
   color: black;
   font-weight: bold;
+  border-radius: 3px;
 }
 
 .buttondelete:hover {

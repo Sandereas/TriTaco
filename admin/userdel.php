@@ -10,8 +10,7 @@
          
      }
 
-
-
+     
 $deluser = [
   'userID' => $_GET['userID'],
 ];
