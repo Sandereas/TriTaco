@@ -1,8 +1,10 @@
 <?php include('connection.php'); ?>
 <?php include('userdata.php') ?>
+<?php
 
+if($_POST['submit'])
 
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,4 +32,10 @@
                 <li> <a href="../admin/admin.php"> Admin </a> </li>
             <ul>
         </div> 
+        <div class="box2">
+            <form action="../php/destinations.php" method="post">
+                <input type="tekst" placeholder="search for destination..." name="key">
+                <input type="submit" value="Submit" name="submit">
+            </form>
+        </div>
     </header>
