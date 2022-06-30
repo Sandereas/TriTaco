@@ -23,20 +23,18 @@ include ('../config/userdata.php');
         <tr>
             <td> <?php echo $datageb[0]['username'] ?> </td>
             <td> <?php echo $datageb[0]['email'] ?> </td>
+            <td> <a href= "contactmail.php" class="buttonadmin"> Mail</a> </td>
         </tr>
         <tr>
             <td> <?php echo $datageb[1]['username'] ?> </td>
             <td> <?php echo $datageb[1]['email'] ?> </td>
+            <td> <a href="contactmial.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Send Mail </a> </td>
         </tr>
     </table>
     </div>
-    ContactFormulier:
+    
+            
 
-    <div>
-        <form action=""></form>
-
-        
-    </div>
 
         
 </main>
