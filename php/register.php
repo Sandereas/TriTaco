@@ -4,7 +4,7 @@
 
     <div class="mainer">
         <div class="box"> 
-            <h1> Add Admin</h1>
+            <h1> Add User</h1>
 
             <br>
 
