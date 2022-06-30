@@ -2,7 +2,15 @@
 <?php include('userdata.php') ?>
 <?php
 
-if($_POST['submit'])
+if($_POST['submit']) {
+    $key = $_POST ['key'];
+    $query = $pdo->prepare ('SELECT * FROM reismogelijkheden WHERE country LIKE :name ORDER BY country');
+    $query->bindValue(':name', '%'.$key. '%', PDO::PARAM_STR);
+    $query->execute();
+    $results = $query->fetchALL();
+    $rows = $query->rowCount();
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -38,4 +46,5 @@ if($_POST['submit'])
                 <input type="submit" value="Submit" name="submit">
             </form>
         </div>
+
     </header>
