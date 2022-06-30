@@ -19,10 +19,10 @@
             <br>
             <br> <br>
 
-            <a href="../php/register.php" class="buttonadmin"> Add Admin</a>
+            <a href= "../php/register.php" class="buttonadmin"> Add Admin</a>
             <br>
             <br>
-            <a href="../admin/destinationsadd.php" class="buttonadmin"> Add Destination</a>
+            <a href= "destinationsadd.php" class="buttonadmin"> Add Destination</a>
             <br>
             <br>
             

@@ -6,7 +6,7 @@ if($_SESSION['loggedin']  == true) {
     echo "GG ". $_SESSION['username'];
 }
     else    {
-        header("Location: ..php/login.php");
+        header("Location: ../php/login.php");
     }
 
 
