@@ -1,15 +1,17 @@
 <?php include('connection.php'); ?>
 <?php include('userdata.php') ?>
-<?php
+<?php include('reisdata.php') ?>
 
-if($_POST['submit']) {
-    $key = $_POST ['key'];
-    $query = $pdo->prepare ('SELECT * FROM reismogelijkheden WHERE country LIKE :name ORDER BY country');
-    $query->bindValue(':name', '%'.$key. '%', PDO::PARAM_STR);
-    $query->execute();
-    $results = $query->fetchALL();
-    $rows = $query->rowCount();
-}
+<?php require 'reisdata.php'; 
+
+// if($_POST['submit']) {
+//     $key = $_POST ['key'];
+//     $query = $pdo->prepare ('SELECT * FROM reismogelijkheden WHERE country LIKE :name ORDER BY country');
+//     $query->bindValue(':country', '%'.$key. '%', PDO::PARAM_STR);
+//     $query->execute();
+//     $results = $query->fetchALL();
+//     $rows = $query->rowCount();
+// }
 
 
 ?>
