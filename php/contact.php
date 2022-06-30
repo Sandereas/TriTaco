@@ -29,5 +29,15 @@ include ('../config/userdata.php');
             <td> <?php echo $datageb[1]['email'] ?> </td>
         </tr>
     </table>
+    </div>
+    ContactFormulier:
+
+    <div>
+        <form action=""></form>
+
+        
+    </div>
+
+        
 </main>
 <?php include('../config/footer.php'); ?>

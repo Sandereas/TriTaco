@@ -2,7 +2,13 @@
 <?php include('../config/header.php'); ?>
 
     <main>
-             
+ 
+ <!-- Menukaart -->
+ 
+ 
+
+<!-- site -->
+
     <div class ="box">
         
             <b> <h1> Dashboard </h1> </b>

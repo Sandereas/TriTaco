@@ -6,6 +6,14 @@
   scroll-behavior: smooth;
 }
 
+/* menukaart */
+
+
+
+
+/* site */
+
+
 .box {
   padding: 1%;
   width: 80%;
@@ -34,6 +42,14 @@
   padding-top: 3px;
   border-bottom: 1px solid black;
 } */
+
+header{
+position: fixed;
+
+
+
+}
+
 
 header ul {
   list-style-type: none;
