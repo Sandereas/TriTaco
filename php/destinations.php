@@ -1,6 +1,7 @@
 <?php include('../config/header.php'); ?>
 <?php include('../config/reisdata.php'); ?>
 
+
 <?php
  if($_SESSION['loggedin'] == true){
      echo "GG ". $_SESSION['username'];
@@ -60,10 +61,10 @@
                             <?php echo $row['description']; ?>
                         </td>
                         <td>
-                        <a href="../admin/destinationschange.php?id=<?php echo $row['reismogelijkheidID']; ?>" class="buttonupdate"> Update Reis </a> 
+                        <a href="../admin/destinationschange.php?reismogelijkheidID=<?php echo $row['reismogelijkheidID']; ?>" class="buttonupdate"> Update Reis </a> 
                         </td>
                         <td colspan="2">
-                        <a href="../admin/destinationsdel.php?id=<?php echo $row['reismogelijkheidID']; ?>" class="buttondelete"> Delete Reis </a> 
+                        <a href="../admin/destinationsdel.php?reismogelijkheidID=<?php echo $row['reismogelijkheidID']; ?>" class="buttondelete"> Delete Reis </a> 
                         </td>
                     </tr>
                     <?php } ?>

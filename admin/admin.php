@@ -2,12 +2,6 @@
 <?php include('../config/userdata.php'); ?>
 
 
-    <main>
-        <div class ="box">
-            <b> <h1> Editor The Web</h1> </b>
-            <br>
-
-            <br>
 
             <?php
                 if(isset($_SESSION['add']))
@@ -16,6 +10,13 @@
                     unset($_SESSION['add']);
                  }
              ?>
+
+    <main>
+        <div class ="box">
+            <b> <h1> Editor The Web</h1> </b>
+            <br>
+
+            <br>
             <br> <br>
 
             <a href="../php/register.php" class="buttonadmin"> Add Admin</a>

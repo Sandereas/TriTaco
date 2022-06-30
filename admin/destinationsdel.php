@@ -3,7 +3,7 @@
 
 <?php
  if($_SESSION['loggedin'] == true){
-     echo $_SESSION['username'];
+  echo "GG ". $_SESSION['username'];
  }
  else {
          header("Location: ../php/login.php");
@@ -18,8 +18,7 @@ $delreis = [
   
   if ($datadest > 0) {
     $results_login = $stmt->fetch(PDO::FETCH_ASSOC);
-  
-    echo "data inserted";
+
     $_SESSION['add'] = "Destination deleted Succesfull";
     header('Location:../php/destinations.php');
     }
