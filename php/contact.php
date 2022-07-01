@@ -21,6 +21,7 @@ include ('../config/userdata.php');
             <th>Email</th>
         </tr>
         <tr>
+        <?php foreach ($datageb as $row) ?> {
             <td> <?php echo $datageb[0]['username'] ?> </td>
             <td> <?php echo $datageb[0]['email'] ?> </td>
             <td> <a href= "contactmail.php" class="buttonadmin"> Mail</a> </td>
@@ -28,8 +29,9 @@ include ('../config/userdata.php');
         <tr>
             <td> <?php echo $datageb[1]['username'] ?> </td>
             <td> <?php echo $datageb[1]['email'] ?> </td>
-            <td> <a href="contactmial.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Send Mail </a> </td>
+            <td> <a href="contactmail.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Send Mail </a> </td>
         </tr>
+        }
     </table>
     </div>
     
