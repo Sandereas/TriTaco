@@ -40,7 +40,13 @@
         <th>Description</th>
     </tr>
     <?php 
-                foreach ($datadest as $row)  {?>
+            $dataToLoop = $datadest;
+
+            if(isset($results)) {
+                $dataToLoop = $results;
+            }
+
+                foreach ($dataToLoop as $row)  {?>
                     <tr>
                         <td> 
                             <?php echo $row['reismogelijkheidID'];?>

@@ -4,14 +4,18 @@
 
 <?php require 'reisdata.php'; 
 
-// if($_POST['submit']) {
-//     $key = $_POST ['key'];
-//     $query = $pdo->prepare ('SELECT * FROM reismogelijkheden WHERE country LIKE :name ORDER BY country');
-//     $query->bindValue(':country', '%'.$key. '%', PDO::PARAM_STR);
-//     $query->execute();
-//     $results = $query->fetchALL();
-//     $rows = $query->rowCount();
-// }
+if(isset($_GET['submit'])) {
+    $key = $_GET ['key'];
+    $search = '%'.$key. '%';
+     $query = $pdo->prepare ('SELECT * FROM reismogelijkheden WHERE country LIKE :search ORDER BY country');
+     $query->bindValue(':search', $search, PDO::PARAM_STR);
+    $query->execute();
+     $results = $query->fetchALL();
+    $rows = $query->rowCount();
+ }
+
+
+
 
 
 ?>
@@ -40,10 +44,11 @@
                 <li> <a href= "../php/contact.php"> Contact </a> </li>
                 <li> <a href="../php/logout.php"> Logout </a> </li>
                 <li> <a href="../admin/admin.php"> Admin </a> </li>
+                <li> <a href="../php/myaccount.php"> MyAccount </a> </li>
             <ul>
         </div> 
         <div class="box2">
-            <form action="../php/destinations.php" method="post">
+            <form action="../php/destinations.php" method="get">
                 <input type="tekst" placeholder="search for destination..." name="key">
                 <input type="submit" value="Submit" name="submit">
             </form>
