@@ -1,5 +1,7 @@
 <?php include('../config/header.php'); ?>
 <?php include ('../config/recensiesconnect.php'); ?>
+<?php include ('../config/userdata.php'); ?>
+<?php include ('../config/reisdata.php'); ?>
 
 <?php
  if($_SESSION['loggedin'] == true){
@@ -15,11 +17,11 @@
 <?php
     //Add Recensies
     if(isset($_POST['submit']))
-    if(isset($_GET['submit']))
-    $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
-    $userID = ($_GET ['userID']);
-    $stars = ($_POST ['stars']);
-    $message = ($_POST ['message']);
+    // if(isset($_GET['submit']))
+    // $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
+    // $userID = ($_GET ['userID']);
+    $stars = $_POST ['stars'];
+    $message = $_POST ['message'];
 
 
     $sql = "INSERT INTO recensies SET
@@ -42,7 +44,7 @@ $recensies = $stmt->fetch();
 
 
         if ($recensies > 0) {
-                $results_recensies = $stmt->fetch(PDO::FETCH_ASSOC);
+                $recensies = $stmt->fetch(PDO::FETCH_ASSOC);
   
         //echo "data inserted";
         $_SESSION['add'] = "Uw feedback is achtergelaten!";
