@@ -33,6 +33,10 @@
             <a href="../php/contact.php" class="buttonhome"> <h1> Contact  </h1> </a>  <br>
                 
             </div>
+
+            <div class="container">
+                <a href="../php/recensies.php" class="buttonhome"> <h1> Feedback </h1> </a> <br>
+            </div>
         </div>    
     
         <div class="Image">
