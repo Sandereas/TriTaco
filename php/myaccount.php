@@ -13,11 +13,11 @@
 ?>
 
 
-
 <br><br>
 
 <?php  
-  $stmt = $pdo->prepare('SELECT * FROM `users` WHERE `username` = '. $_SESSION['username'] .'');
+  $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+  $stmt->bindParam(':username', $_SESSION['username']);
   $stmt->execute(); 
   $fetch = $stmt->fetch();
 ?>
@@ -25,21 +25,18 @@
 <div class="box1">
      <h4><?php echo $fetch['username']; ?></h4>
      <p><?php echo $fetch['email']; ?></p>
+     <p><?php echo $fetch['userID']; ?></p>
+     <br>
+     <br>
 
-    <a href="userchange.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Update Useraccount </a> 
-                
- </div>
+     <?php foreach ($datageb as $row)  {?>
 
   
+    <a href="../admin/userchange.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Update Useraccount </a> 
+  <?php } ?>
+ </div>
 
-
-
-
-
-
-
-
-
-
+<br>
+<br>
 
 <?php include "../config/footer.php" ?>
