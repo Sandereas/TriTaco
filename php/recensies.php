@@ -17,7 +17,7 @@
     if(isset($_POST['submit']))
 
     $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
-    $userID = $_GET ['userID'];
+    $userID = ($_GET ['userID']);
     $stars = $_POST ['stars'];
     $message = $_POST ['message'];
 
