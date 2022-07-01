@@ -15,7 +15,7 @@
 <?php
     //Add Recensies
     if(isset($_POST['submit']))
-
+    if(isset($_GET['submit']))
     $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
     $userID = ($_GET ['userID']);
     $stars = $_POST ['stars'];
@@ -30,6 +30,7 @@
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
+    
     'stars' => $stars,
     'message' => $message
 
@@ -79,23 +80,23 @@ $recensies = $stmt->fetch();
  <div>
    <div class="stars">
      <img src="" alt=""> <br/>
-     <input type="radio" name="quality" value="0"> Bad
+     <input type="" name="quality" value="0"> Bad
    </div>
    <div class="stars">
      <img src="" alt=""> <br/>
-     <input type="radio" name="quality" value="1"> Okay
+     <input type="" name="quality" value="1"> Okay
    </div>
    <div class="stars">
      <img src="" alt=""> <br/>
-     <input type="radio" name="quality" value="2"> Good
+     <input type="" name="quality" value="2"> Good
    </div>
    <div class="stars">
      <img src="" alt=""> <br/>
-     <input type="radio" name="quality" value="3"> Very good
+     <input type="" name="quality" value="3"> Very good
    </div>
    <div class="stars">
      <img src="" alt=""> <br/>
-     <input type="radio" name="quality" value="4"> Perfect
+     <input type="" name="quality" value="4"> Perfect
    </div>
 
  </div>
