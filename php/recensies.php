@@ -83,7 +83,7 @@ $recensies = $stmt->fetch();
 </head>
 <body>
 <div class="form_box shadow">
- <form method="post" action="recensies">
+ <form method="post" action="recensies.php">
  <div class="heading">
    Feedback Form in PHP
  </div>
