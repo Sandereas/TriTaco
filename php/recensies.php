@@ -53,7 +53,6 @@ $recensies = $stmt->fetch();
         $_SESSION['add'] = "Er is iets mis gegaan.";
         header('Location:recensiesadd.php');
     }
-}
     ?>
 
 
