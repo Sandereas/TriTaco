@@ -58,12 +58,12 @@ $recensies = $stmt->fetch();
   
         //echo "data inserted";
         $_SESSION['add'] = "Uw feedback is achtergelaten!";
-        header('Location:../site/home.php');
+        header('Location:recensies.php');
         }
     else {
         //echo "error";
         $_SESSION['add'] = "Er is iets mis gegaan.";
-        header('Location:recensies.php');
+        header('Location:recensiesadd.php');
     }
 }
     ?>
