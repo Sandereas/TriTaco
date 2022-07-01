@@ -18,12 +18,11 @@
     if(isset($_GET['submit']))
     $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
     $userID = ($_GET ['userID']);
-    $stars = $_POST ['stars'];
-    $message = $_POST ['message'];
+    $stars = ($_POST ['stars']);
+    $message = ($_POST ['message']);
 
 
     $sql = "INSERT INTO recensies SET
-        gevalideerd =:gevalideerd,
         stars = :stars,
         message = :message
     ";
@@ -64,7 +63,7 @@ $recensies = $stmt->fetch();
 <div class="form_box shadow">
  <form method="post" action="recensies.php">
  <div class="heading">
-   Feedback Form in PHP
+  Laat hier uw feedback achter!
  </div>
  <br/>
  <p>Hoe goed heeft onze website u geholpen?</p>
@@ -93,7 +92,7 @@ $recensies = $stmt->fetch();
  </div>
  
  <p>Heeft u enige opmerkingen? </p>
- <textarea name=" feedbacktekst" rows="8" cols="40"></textarea>
+ <textarea name=" feedbacktekst" rows="6" cols="40"></textarea>
   <input type="submit" name="submit" value="Typ hier uw feedback!">
 </form>
  </div>    
