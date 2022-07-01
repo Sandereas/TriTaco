@@ -29,11 +29,9 @@
      <br>
      <br>
 
-     <?php foreach ($datageb as $row)  {?>
 
   
-    <a href="../admin/userchange.php?userID=<?php echo $row['userID']; ?>" class="buttonupdate"> Update Useraccount </a> 
-  <?php } ?>
+    <a href="../admin/userchange.php?userID=<?php echo $fetch['userID']; ?>" class="buttonupdate"> Update Useraccount </a> 
  </div>
 
 <br>
