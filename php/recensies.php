@@ -15,34 +15,22 @@
 <?php
     //Add Recensies
     if(isset($_POST['submit']))
-{
-    $recensieID = $_POST ['recensieID'];
-    $reismogelijkheidID = ($_POST ['reismogelijkheidID']);
-    $userID = $_POST ['userID'];
-    $gevalideerd = $_POST ['gevalideerd'];
+
+    $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
+    $userID = $_GET ['userID'];
     $stars = $_POST ['stars'];
-    $date = $_POST ['date'];
     $message = $_POST ['message'];
 
 
     $sql = "INSERT INTO recensies SET
-        recensieID = recensieID,
-        reismogelijkheidID = :reismogelijkheidID,
-        userID = :userID,
         gevalideerd =:gevalideerd,
         stars = :stars,
-        date = :date,
         message = :message
     ";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-    'recensieID' => $recensieID,
-    'reismogelijkheidID' => $reismogelijkheidID,
-    'userID' => $userID,
-    'gevalideerd' => $gevalideerd,
     'stars' => $stars,
-    'date' => $date,
     'message' => $message
 
 
