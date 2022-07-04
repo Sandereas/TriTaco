@@ -1,5 +1,7 @@
 <?php include('../config/header.php'); ?>
 <?php include ('../config/recensiesconnect.php'); ?>
+<?php include ('../config/userdata.php'); ?>
+<?php include ('../config/reisdata.php'); ?>
 
 <?php
  if($_SESSION['loggedin'] == true){
