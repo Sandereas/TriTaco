@@ -45,6 +45,7 @@ if(isset($_GET['submit'])) {
                 <li> <a href="../php/logout.php"> Logout </a> </li>
                 <li> <a href="../admin/admin.php"> Admin </a> </li>
                 <li> <a href="../php/myaccount.php"> MyAccount </a> </li>
+                <li> <a href="../php/recensies.php"> Recensies </a> <li>
             <ul>
         </div> 
         <div class="box2">

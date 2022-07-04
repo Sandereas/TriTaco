@@ -4,6 +4,4 @@
         $stmt->execute();
         $datadest = $stmt->fetchall();      
         
-        
-
     ?>

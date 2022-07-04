@@ -1,6 +1,16 @@
 <?php include('../config/header.php'); ?>
 <?php include ('../config/recensiesconnect.php'); ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet" crossorigin="anonymous" />
+    <title>Recensies</title>
+</head>
+<body>
 <?php
  if($_SESSION['loggedin'] == true){
      echo "GG ". $_SESSION['username'];
@@ -12,92 +22,35 @@
      
 ?>
 
-<?php
-    //Add Recensies
-    if(isset($_POST['submit']))
-    if(isset($_GET['submit']))
-    $reismogelijkheidID = ($_GET ['reismogelijkheidID']);
-    $userID = ($_GET ['userID']);
-    $stars = ($_POST ['stars']);
-    $message = ($_POST ['message']);
+<?php if(isset($_SESSION['recensies']))
+                 {
+                    echo $_SESSION['recensies'];
+                    unset($_SESSION['recensies']);
+                 }
+        ?>
 
+<?php $dataToLoop = $datadest;
 
-    $sql = "INSERT INTO recensies SET
-        stars = :stars,
-        message = :message
-    ";
+if(isset($results)) {
+    $dataToLoop = $results;
+}
 
-$stmt = $pdo->prepare($sql);
-$stmt->execute([
-    
-    'stars' => $stars,
-    'message' => $message
-
-
-]); 
-$recensies = $stmt->fetch();
-    
-    // uitvoeren en opslaan in de database
-
-
-
-        if ($recensies > 0) {
-                $results_recensies = $stmt->fetch(PDO::FETCH_ASSOC);
-  
-        //echo "data inserted";
-        $_SESSION['add'] = "Uw feedback is achtergelaten!";
-        header('Location:recensies.php');
-        }
-    else {
-        //echo "error";
-        $_SESSION['add'] = "Er is iets mis gegaan.";
-        header('Location:recensiesadd.php');
-    }
-    ?>
-
-
-
-
-
-
-<div class="form_box shadow">
- <form method="post" action="recensies.php">
- <div class="heading">
-  Laat hier uw feedback achter!
- </div>
- <br/>
- <p>Hoe goed heeft onze website u geholpen?</p>
- <div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="0"> Bad
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="1"> Okay
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="2"> Good
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="3"> Very good
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="4"> Perfect
-   </div>
-
- </div>
+    foreach ($dataToLoop as $row)  {?>
  
- <p>Heeft u enige opmerkingen? </p>
- <textarea name=" feedbacktekst" rows="6" cols="40"></textarea>
-  <input type="submit" name="submit" value="Typ hier uw feedback!">
-</form>
- </div>    
+    <table>
+            <tr>
+    <th>RecensieID</th>
+    <th>Sterren</th>
+    <th>Bericht</th>
+                </tr>
+                <tr>
+    <td><?php echo $row['recensieID'];?></d>
+    <td><?php echo $row['quality'];?></td>
 
-
+    <td><?php echo $row['message'];?></td>
+                </tr>
+</table>
+  <?php  } ?>
 
 
 </body>

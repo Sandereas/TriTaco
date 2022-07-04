@@ -1,9 +1,21 @@
 
 <?php include('../config/header.php'); ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/home.css" rel="stylesheet" crossorigin="anonymous" />
+    <title>GG</title>
+</head>
+<body>
+    
+</body>
+</html>
     <main>
  
- <!-- Menukaart -->
  
  
 
@@ -35,7 +47,7 @@
             </div>
 
             <div class="container">
-                <a href="../php/recensies.php" class="buttonhome"> <h1> Feedback </h1> </a> <br>
+                <a href="../php/recentiesadd.php" class="buttonhome"> <h1> Feedback </h1> </a> <br>
             </div>
         </div>    
     

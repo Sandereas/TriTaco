@@ -12,118 +12,114 @@
      
 ?>
 
+<div class="mainer">
+    <div class="box">
+     <h1> Add Feedback!</h1>
+
+     <br>
 <?php
-    //Add Recensies
-    if(isset($_POST['submit']))
+if(isset($_SESSION['add']))
 {
-    $recensieID = $_POST ['recensieID'];
-    $reismogelijkheidID = ($_POST ['reismogelijkheidID']);
-    $userID = $_POST ['userID'];
-    $gevalideerd = $_POST ['gevalideerd'];
-    $stars = $_POST ['stars'];
-    $date = $_POST ['date'];
-    $message = $_POST ['message'];
-
-
-    $sql = "INSERT INTO recensies SET
-        recensieID = recensieID,
-        reismogelijkheidID = :reismogelijkheidID,
-        userID = :userID,
-        gevalideerd =:gevalideerd,
-        stars = :stars,
-        date = :date,
-        message = :message
-    ";
-
-$stmt = $pdo->prepare($sql);
-$stmt->execute([
-    'recensieID' => $recensieID,
-    'reismogelijkheidID' => $reismogelijkheidID,
-    'userID' => $userID,
-    'gevalideerd' => $gevalideerd,
-    'stars' => $stars,
-    'date' => $date,
-    'message' => $message
-
-
-]); 
-$recensies = $stmt->fetch();
-    
-    // uitvoeren en opslaan in de database
-
-
-
-        if ($recensies > 0) {
-                $results_recensies = $stmt->fetch(PDO::FETCH_ASSOC);
-  
-        //echo "data inserted";
-        $_SESSION['add'] = "Uw feedback is achtergelaten!";
-        header('Location:recensies.php');
-        }
-    else {
-        //echo "error";
-        $_SESSION['add'] = "Er is iets mis gegaan.";
-        header('Location:recensiesadd.php');
-    }
+    echo $_SESSION['add'];
+    unset($_SESSION['add']);
 }
-    ?>
+?>
+<br>
+
+<form action= "" method="POST">
+
+<table class= "tableaddrecensies">
+                <tr>
+<select name='quality'>
+
+<h1> Choose here how many stars you give us! </h1>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+</tr>
+
+                <tr>
+                    <td>Message</td>
+                    <td><input type="text" name="message" placeholder="Typ here the message" ></td> 
+                </tr>
+                <tr>
+
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Add Feedback" class="buttonsub">
+                    </td>
+                </tr>
+            </table>
+</form>
+    <!-- //Add Recensies -->
+   <?php if(isset($_POST['submit'])) 
+    {
+
+        $quality = $_POST ['quality'];
+        $message = $_POST ['message'];
+
+        $sql = "INSERT INTO recensies SET quality = :quality, message = :message";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'quality' => $quality,
+            'message' => $message
+        ]); 
+        $recensies = $stmt->fetch();
+
+        // uitvoeren en opslaan in de database
+        if ($datadest > 0) {
+            $results_login = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            //echo "data inserted";
+            $_SESSION['add'] = "Uw feedback is achtergelaten!";
+            header('Location:recensies.php');
+            }
+            else {
+            //echo "error";
+            $_SESSION['add'] = "Er is iets mis gegaan.";
+            header('Location:recensiesadd.php');
+        }
+    }
+?>
+
+
+<!-- 
 
 
 
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
-</head>
-<body>
 <div class="form_box shadow">
  <form method="post" action="recensies.php">
  <div class="heading">
-   Feedback Form in PHP
+  Laat hier uw feedback achter!
  </div>
  <br/>
  <p>Hoe goed heeft onze website u geholpen?</p>
  <div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="0"> Bad
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="1"> Okay
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="2"> Good
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="3"> Very good
-   </div>
-   <div class="stars">
-     <img src="" alt=""> <br/>
-     <input type="" name="quality" value="4"> Perfect
-   </div>
+    <select name='quality'>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
 
  </div>
  
  <p>Heeft u enige opmerkingen? </p>
- <textarea name=" feedbacktekst" rows="8" cols="40"></textarea>
+ <textarea name=" feedbacktekst" rows="6" cols="40"></textarea>
   <input type="submit" name="submit" value="Typ hier uw feedback!">
 </form>
  </div>    
-
+ -->
 
 
 
 </body>
 </html>
+
 
 
 
